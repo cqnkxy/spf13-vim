@@ -720,7 +720,7 @@
             let g:UltiSnipsExpandTrigger = '<C-j>'
             let g:UltiSnipsJumpForwardTrigger = '<C-j>'
             let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-
+            let g:ycm_filepath_completion_use_working_dir = 1
             " Enable omni completion.
             autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
             autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -1136,11 +1136,11 @@
     endif
 " }
 
-nnoremap \\\ :YouCompleteMe GoToImprecise<CR>
-nnoremap \\c :YouCompleteMe GoToDeclaration<CR>
-nnoremap \\f :YouCompleteMe GoToDefinition<CR>
-nnoremap \\r :YouCompleteMe GoToReferences<CR>
-nnoremap \\t :YouCompleteMe GetTypeImprecise<CR>
-nnoremap \\d :YouCompleteMe GetDocImprecise<CR>
-nnoremap \\x :YouCompleteMe FixIt<CR>
+nnoremap \\\ :YcmCompleter GoToDeclaration<CR>
+nnoremap \\i :YcmCompleter GoToImprecise<CR>
+nnoremap \\f :YcmCompleter GoToDefinition<CR>
+nnoremap \\r :YcmCompleter GoToReferences<CR>
+nnoremap \\t :YcmCompleter GetTypeImprecise<CR>
+nnoremap \\d :YcmCompleter GetDocImprecise<CR>
+nnoremap \\x :YcmCompleter FixIt<CR>
 nnoremap -nargs=0 YcmClearCompilationFlagCache YcmCompleter ClearCompilationFlagCache
